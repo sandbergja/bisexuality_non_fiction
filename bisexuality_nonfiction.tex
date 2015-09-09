@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\RequirePackage[style=apa,backend=biber]{biblatex}
+\usepackage{hyperref}
+\usepackage[numbib]{tocbibind}
+\addbibresource{bisexuality.bib}
+
+\DeclareLanguageMapping{american}{american-apa}
+
+%% annote
+\renewbibmacro*{finentry}{%
+  \iffieldundef{annotation}
+    {\finentry\vspace{14pt}}
+    {\setunit{\finentrypunct\par\vspace{9pt}\nobreak}
+     \printfield{annotation}\vspace{14pt}%
+     \finentry}
+     }
+
+\title{Bisexuality: \\An Annotated Bibliography of Non-fiction books}
+\author{Compiled by Jane Sandberg}
+\date{Last updated \today}
+
+\begin{document}
+\maketitle
+
+ 
+ This bibliography includes non-fiction published 2005 or later about bisexuality, bisexuals, pansexuality, and other non-monosexual identities
+ 
+ \newpage
+ %\tableofcontents
+ %\newpage
+
+ 
+ \nocite{*}
+ 
+ \printbibliography[title={Draft},heading=bibnumbered]
+ 
+
+\end{document}
